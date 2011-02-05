@@ -21,7 +21,7 @@ use constant DEBUG => $ENV{CG_DEBUG} || 0;
 
 our $api_host = 'api2.citysearch.com';
 our $api_base = "http://$api_host/search/";
-our $VERSION  = 0.02;
+our $VERSION  = 0.03;
 
 our $Ua = LWP::UserAgent->new( agent => join( '_', __PACKAGE__, $VERSION ) );
 our $Parser = XML::LibXML->new;

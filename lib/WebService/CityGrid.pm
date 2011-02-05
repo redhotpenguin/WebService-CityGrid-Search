@@ -17,7 +17,7 @@ has 'publisher' => ( is => 'ro', isa => 'Str', required => 1 );
 
 our $api_host = 'api2.citysearch.com';
 our $api_base = "http://$api_host/search/";
-our $VERSION  = '0.01';
+our $VERSION  = '0.03';
 
 
 1;
