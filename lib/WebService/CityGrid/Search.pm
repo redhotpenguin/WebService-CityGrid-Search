@@ -21,7 +21,7 @@ use constant DEBUG => $ENV{CG_DEBUG} || 0;
 
 our $api_host = 'api2.citysearch.com';
 our $api_base = "http://$api_host/search/";
-our $VERSION  = 0.03;
+our $VERSION  = 0.04;
 
 our $Ua = LWP::UserAgent->new( agent => join( '_', __PACKAGE__, $VERSION ) );
 our $Parser = XML::LibXML->new;
@@ -174,7 +174,7 @@ has 'samplecategories' => ( is => 'rw', isa => 'Str', required => 0 );
       api_key   => $my_apikey,
       publisher => $my_pubid, );
 
-  $url = $cs->make_url({ mode => 'locations', 
+  $url = $cs->query({ mode => 'locations', 
       where => '90210',
       what  => 'pizza%20and%20burgers', });
 
